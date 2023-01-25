@@ -1,0 +1,123 @@
+.tableImg {
+  width:48px;
+  margin: 0.5rem 0;
+}
+
+.tableName a {
+  line-height:24px;
+  font-weight:600;
+  letter-spacing:1px;
+}
+.tableName img {
+  vertical-align: middle;
+  margin: 0 0.2rem;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltipCaption {
+  font-size: 1.1rem;
+  font-weight:bold;
+}
+.tooltipRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 24px;
+  align-items:center;
+  vertical-align:middle;
+  align-content:center;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.tooltipRow div:nth-child(odd) {
+  text-align:right;
+}
+.tooltipRow:nth-child(even) {
+    background-color: var(--elevation3);
+}
+
+.progress {
+  vertical-align:middle;
+  height:8px;
+  width:90%;
+}
+
+.tooltip .tooltipelement {
+  text-align: center;
+  visibility: hidden;
+  width: 240px;
+  max-width:none;
+  background-color: var(--elevation2);
+  border-radius: 6px;
+  border: 1px solid var(--elevation3);
+  padding: 5px 0;
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  margin-left: -120px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltipelementSmall {
+  text-align: center;
+  visibility: hidden;
+  width: 120px;
+  max-width:none;
+  background-color: var(--elevation2);
+  border-radius: 6px;
+  border: 1px solid var(--elevation3);
+  padding: 5px 0;
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltipelement, .tooltip:hover .tooltipelementSmall {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+
+
+
+.filterContainer {
+display: flex;
+flex-direction:row;
+flex-wrap:wrap;
+justify-content:flex-start;
+gap:16px;
+width:100%;
+margin: var(--spacings) 0;
+}
+
+.filterView {
+  width:25%;
+}
+
+.buttonList {
+  display: flex; /* or inline-flex */
+}
+
+.buttonList button {
+  padding: 4px 8px;
+  height:32px;
+  border:1px solid black;
+}
+
+.img {
+  overflow: hidden
+}
+
+.active {
+  background-color:var(--accent) !important;
+  border:1px solid var(--accent2) !important;
+}

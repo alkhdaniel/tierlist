@@ -13,7 +13,7 @@ export default function imageTierList ({ list }) {
 					            <li key={character.id} className={`flexItemSmall ${Styles.tooltip}`}>
 						            <Link href={`/characters/${character.url}`}>
 					                    <div className="flexItemSmallImgContainer">
-                                <img width="64px" height="64px" loading="lazy" src={`/images/characters/${character.img}.webp`} alt={character.name} />
+                                <img width="64px" height="64px" loading="lazy" src={`https://db.nikke.gg/images/characters/${character.img}.webp`} alt={character.name} />
 					                    </div>
 					                    {/*<div className={Styles.line}></div>*/}
 					                    <p>{character.name}</p>

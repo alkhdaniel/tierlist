@@ -15,13 +15,13 @@ export default function Filter ({ view, filters, changeView, changeFilters }) {
                         <span>All</span>
                     </button>
                     <button className={(filters.burst=="1") ? Styles.active : ""} onClick={ () => changeFilters("burst", "1") }>
-                        <img alt="Burst 1" width="20" height="20" className={Styles.img} src={`/images/icon/icn_burst_1.webp`} />
+                        <img alt="Burst 1" width="20" height="20" className={Styles.img} src={`https://db.nikke.gg/images/icon/icn_burst_1.webp`} />
                     </button>
                     <button className={(filters.burst=="2") ? Styles.active : ""} onClick={ () => changeFilters("burst", "2") }>
-                        <img alt="Burst 2" width="20" height="20" className={Styles.img} src={`/images/icon/icn_burst_2.webp`} />
+                        <img alt="Burst 2" width="20" height="20" className={Styles.img} src={`https://db.nikke.gg/images/icon/icn_burst_2.webp`} />
                     </button>
                     <button className={(filters.burst=="3") ? Styles.active : ""} onClick={ () => changeFilters("burst", "3") }>
-                        <img alt="Burst 3" width="20" height="20" className={Styles.img} src={`/images/icon/icn_burst_3.webp`} />
+                        <img alt="Burst 3" width="20" height="20" className={Styles.img} src={`https://db.nikke.gg/images/icon/icn_burst_3.webp`} />
                     </button>
                 </div>
                 <div className={Styles.buttonList}>
@@ -29,13 +29,13 @@ export default function Filter ({ view, filters, changeView, changeFilters }) {
                         <span>All</span>
                     </button>
                     <button className={(filters.class=="attacker") ? Styles.active : ""} onClick={ () => changeFilters("class", "attacker") }>
-                        <img alt="Attacker" width="20" height="20" className={Styles.img} src={`/images/icon/icn_class_attacker.webp`} />
+                        <img alt="Attacker" width="20" height="20" className={Styles.img} src={`https://db.nikke.gg/images/icon/icn_class_attacker.webp`} />
                     </button>
                     <button className={(filters.class=="supporter") ? Styles.active : ""} onClick={ () => changeFilters("class", "supporter") }>
-                        <img alt="Supporter" width="20" height="20" className={Styles.img} src={`/images/icon/icn_class_supporter.webp`} />
+                        <img alt="Supporter" width="20" height="20" className={Styles.img} src={`https://db.nikke.gg/images/icon/icn_class_supporter.webp`} />
                     </button>
                     <button className={(filters.class=="defender") ? Styles.active : ""} onClick={ () => changeFilters("class", "defender") }>
-                        <img alt="Defender" width="20" height="20" className={Styles.img} src={`/images/icon/icn_class_defender.webp`} />
+                        <img alt="Defender" width="20" height="20" className={Styles.img} src={`https://db.nikke.gg/images/icon/icn_class_defender.webp`} />
                     </button>
                 </div>
                 <div className={Styles.buttonList}>
@@ -43,19 +43,19 @@ export default function Filter ({ view, filters, changeView, changeFilters }) {
                         <span>All</span>
                     </button>
                     <button className={(filters.weapon=="ar") ? Styles.active : ""} onClick={ () => changeFilters("weapon", "ar") }>
-                        <img alt="Assault Rifle" width="20" height="20" className={Styles.img} src={`/images/icon/icn_weapon_ar.webp`} />
+                        <img alt="Assault Rifle" width="20" height="20" className={Styles.img} src={`https://db.nikke.gg/images/icon/icn_weapon_ar.webp`} />
                     </button>
                     <button className={(filters.weapon=="sr") ? Styles.active : ""} onClick={ () => changeFilters("weapon", "sr") }>
-                        <img alt="Sniper Rifle" width="20" height="20" className={Styles.img} src={`/images/icon/icn_weapon_sr.webp`} />
+                        <img alt="Sniper Rifle" width="20" height="20" className={Styles.img} src={`https://db.nikke.gg/images/icon/icn_weapon_sr.webp`} />
                     </button>
                     <button className={(filters.weapon=="sg") ? Styles.active : ""} onClick={ () => changeFilters("weapon", "sg") }>
-                        <img alt="Shotgun" width="20" height="20" className={Styles.img} src={`/images/icon/icn_weapon_sg.webp`} />
+                        <img alt="Shotgun" width="20" height="20" className={Styles.img} src={`https://db.nikke.gg/images/icon/icn_weapon_sg.webp`} />
                     </button>
                     <button className={(filters.weapon=="smg") ? Styles.active : ""} onClick={ () => changeFilters("weapon", "smg") }>
-                        <img alt="SMG" width="20" height="20" className={Styles.img} src={`/images/icon/icn_weapon_smg.webp`} />
+                        <img alt="SMG" width="20" height="20" className={Styles.img} src={`https://db.nikke.gg/images/icon/icn_weapon_smg.webp`} />
                     </button>
                     <button className={(filters.weapon=="rl") ? Styles.active : ""} onClick={ () => changeFilters("weapon", "rl") }>
-                        <img alt="Rocket Launcher" width="20" height="20" className={Styles.img} src={`/images/icon/icn_weapon_rl.webp`} />
+                        <img alt="Rocket Launcher" width="20" height="20" className={Styles.img} src={`https://db.nikke.gg/images/icon/icn_weapon_rl.webp`} />
                     </button>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	distDir: "dist",
+	basePath: "/embed",
 	reactStrictMode: true,
 }
 

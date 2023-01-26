@@ -8,7 +8,7 @@ export default function imageList ({ list }) {
             <li key={i} className="flexItemSmall">
                 <Link href={`/characters/${object.url}`}>
                     <div className="flexItemSmallImgContainer">
-                        <img width="80" height="80" loading="lazy" src={`/images/characters/${object.img}.webp`} alt={object.name}/>
+                        <img width="80" height="80" loading="lazy" src={`https://db.nikke.gg/images/characters/${object.img}.webp`} alt={object.name}/>
                     </div>
                     <p>{object.name}</p>
                 </Link>

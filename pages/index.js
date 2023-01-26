@@ -1,6 +1,6 @@
 import Link from "next/link"
 import CharacterFilter from "/components/characterFilter"
-import ImageList from "/components/imageList"
+import ImageTierList from "/components/imageTierList"
 import TableList from "/components/tableList"
 import { useState, useEffect } from "react"
 
@@ -67,12 +67,21 @@ export default function Home() {
       }, [filters, sortedCharacters]);
 
   if (!isLoading) {
+    const tierGrouping = {}
+    tierGrouping.SSS = filteredCharacters.filter(char => char["overall"] > 9.5 && char["overall"] <= 10)
+    tierGrouping.SS = filteredCharacters.filter(char => char["overall"] > 9 && char["overall"] <= 9.5)
+    tierGrouping.S = filteredCharacters.filter(char => char["overall"] > 8 && char["overall"] <= 9)
+    tierGrouping.A = filteredCharacters.filter(char => char["overall"] > 7 && char["overall"] <= 8)
+    tierGrouping.B = filteredCharacters.filter(char => char["overall"] > 6 && char["overall"] <= 7)
+    tierGrouping.C = filteredCharacters.filter(char => char["overall"] > 4 && char["overall"] <= 6)
+    tierGrouping.D = filteredCharacters.filter(char => char["overall"] > 2 && char["overall"] <= 4)
+    tierGrouping.F = filteredCharacters.filter(char => char["overall"] < 2)
     return (
       <>
         <CharacterFilter view={view} filters={filters} changeView={changeView} changeFilters={changeFilters} />
         {view ?
-          <TableList list={filteredCharacters} fields={tableFields} changeSort={changeSort} imgfolder="characters" linkpath="characters" /> :
-          <ImageList list={filteredCharacters} imgfolder="characters" linkpath="characters" />
+          <TableList list={filteredCharacters} fields={tableFields} changeSort={changeSort} /> :
+          <ImageTierList list={tierGrouping} />
         }
       </>
     )

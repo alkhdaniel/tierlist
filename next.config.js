@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	basePath: "/embed",
-  reactStrictMode: true,
+	distDir: "dist",
+	reactStrictMode: true,
 }
 
 module.exports = nextConfig

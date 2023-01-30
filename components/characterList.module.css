@@ -121,3 +121,142 @@ margin: var(--spacings) 0;
   background-color:var(--accent) !important;
   border:1px solid var(--accent2) !important;
 }
+
+
+
+
+.tierTable {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin: 16px 0;
+}
+
+.tierContainer {
+  min-height:168px;
+}
+.tierTag {
+  font-weight:bold;
+  font-size:1.25rem;
+  cursor: default;
+  margin: auto;
+}
+
+.font {
+  font-size:1rem;
+}
+
+.name a {
+  line-height:24px;
+  font-weight:600;
+  letter-spacing:1px;
+}
+.name img {
+  vertical-align: middle;
+  margin: 0 0.2rem;
+}
+
+.tableRating {
+  width:85px;
+  overflow-wrap: break-word;
+}
+
+.listImg {
+  width:48px;
+  margin: 0.5rem 0;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltipCaption {
+  font-size: 1.1rem;
+  font-weight:bold;
+}
+.tooltipRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 24px;
+  align-items:center;
+  vertical-align:middle;
+  align-content:center;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.tooltipRow div:nth-child(odd) {
+  text-align:right;
+}
+.tooltipRow:nth-child(even) {
+    background-color: var(--elevation3);
+}
+
+.progress {
+  vertical-align:middle;
+  height:8px;
+  width:90%;
+}
+
+.tooltip .tooltipelement {
+  text-align: center;
+  visibility: hidden;
+  width: 240px;
+  max-width:none;
+  background-color: var(--elevation2);
+  border-radius: 6px;
+  border: 1px solid var(--elevation3);
+  padding: 5px 0;
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  margin-left: -120px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltipelementSmall {
+  text-align: center;
+  visibility: hidden;
+  width: 120px;
+  max-width:none;
+  background-color: var(--elevation2);
+  border-radius: 6px;
+  border: 1px solid var(--elevation3);
+  padding: 5px 0;
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltipelement, .tooltip:hover .tooltipelementSmall {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+@media only screen and (min-width: 860px) {
+  .tierTag {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+  }
+  .tierTable {
+  grid-template-columns: 45px 1fr;
+  grid-template-rows: 1fr;
+  }
+}
+
+
+.img {
+  overflow: hidden
+}
+
+.active {
+  background-color:var(--elevation3) !important;
+  border:1px solid var(--accent) !important;
+}

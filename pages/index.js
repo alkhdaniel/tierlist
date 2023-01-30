@@ -49,7 +49,6 @@ export default function Home() {
 
       useEffect(() => {
           if (!isLoading) {
-            console.log(tierlist)
             const sorted = [...tierlist].sort((a, b) => (a[sorter] > b[sorter]) ? -1*ascending : ((b[sorter] > a[sorter]) ? 1*ascending : 0))
             setSortedCharacters(sorted)
           }
@@ -58,7 +57,6 @@ export default function Home() {
       useEffect(() => {
           if (!isLoading) {
             let filtered = sortedCharacters;
-            console.log(filtered)
             filters.weapon ? filtered = filtered.filter(character => character.weapon.toLowerCase() == filters.weapon) : "";
             filters.class ? filtered = filtered.filter(character => character.class.toLowerCase() == filters.class) : "";
             filters.burst ? filtered = filtered.filter(character => character.burst.toLowerCase() == filters.burst) : "";

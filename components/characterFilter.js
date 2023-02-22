@@ -1,15 +1,17 @@
 "use client"
-import Styles from './characterList.module.css'
+import Styles from './characterlist.module.css'
 import Link from "next/link"
 
-export default function Filter ({ view, filters, changeView, changeFilters }) {
+export default function Filter ({ view, filters, changeView, changeFilters, options }) {
     return (
         <>
             <div className={`${Styles.filterContainer}`}>
-                <div className={Styles.buttonList}>
-                    <button className={(view==0) ? Styles.active : ""} onClick={ () => changeView(0) }>Image View</button>
-                    <button className={(view==1) ? Styles.active : ""} onClick={ () => changeView(1)} >List View</button>
-                </div>
+                {changeView &&
+                    <div className={Styles.buttonList}>
+                        <button className={(view==0) ? Styles.active : ""} onClick={ () => changeView(0) }>Image View</button>
+                        <button className={(view==1) ? Styles.active : ""} onClick={ () => changeView(1)} >List View</button>
+                    </div>
+                }
                 <div className={Styles.buttonList}>
                     <button className={(filters.burst=="") ? Styles.active : ""} onClick={ () => changeFilters("burst", "") }>
                         <span>All</span>
@@ -58,6 +60,40 @@ export default function Filter ({ view, filters, changeView, changeFilters }) {
                         <img alt="Rocket Launcher" width="20" height="20" className={Styles.img} src={`https://db.nikke.gg/images/icon/icn_weapon_rl.webp`} />
                     </button>
                 </div>
+                <div className={Styles.buttonList}>
+                    <button className={(filters.element=="") ? Styles.active : ""} onClick={ () => changeFilters("element", "") }>
+                        <span>All</span>
+                    </button>
+                    <button className={(filters.element=="wind") ? Styles.active : ""} onClick={ () => changeFilters("element", "wind") }>
+                        <img alt="Wind" width="20" height="20" className={Styles.img} src={`https://db.nikke.gg/images/icon/icn_element_wind.webp`} />
+                    </button>
+                    <button className={(filters.element=="electric") ? Styles.active : ""} onClick={ () => changeFilters("element", "electric") }>
+                        <img alt="Electricity" width="20" height="20" className={Styles.img} src={`https://db.nikke.gg/images/icon/icn_element_elect.webp`} />
+                    </button>
+                    <button className={(filters.element=="fire") ? Styles.active : ""} onClick={ () => changeFilters("element", "fire") }>
+                        <img alt="Fire" width="20" height="20" className={Styles.img} src={`https://db.nikke.gg/images/icon/icn_element_fire.webp`} />
+                    </button>
+                    <button className={(filters.element=="iron") ? Styles.active : ""} onClick={ () => changeFilters("element", "iron") }>
+                        <img alt="Iron" width="20" height="20" className={Styles.img} src={`https://db.nikke.gg/images/icon/icn_element_iron.webp`} />
+                    </button>
+                    <button className={(filters.element=="water") ? Styles.active : ""} onClick={ () => changeFilters("element", "water") }>
+                        <img alt="Water" width="20" height="20" className={Styles.img} src={`https://db.nikke.gg/images/icon/icn_element_water.webp`} />
+                    </button>
+                </div>
+                {Object.entries(filters).map(([key, value]) => {
+                    if (key == "manufacturer") {
+                        return (
+                            <div key={key}>
+                                <select onChange={(e) => changeFilters(key, e.target.value) } name={key} id={key}>
+                                    <option value="">Any {key}</option>
+                                    {options[key].map((option,index) => (
+                                    <option key={option} value={option}>{option}</option>
+                                    ))}
+                                </select>
+                            </div>
+                        )
+                    }
+                })}
             </div>
         </>
     )

@@ -1,3 +1,29 @@
+/*Colors*/
+.SSS {
+  color: #c12d5c;
+}
+.SS {
+  color: #c34545;
+}
+.S {
+  color: #bc5d34;
+}
+.A {
+  color: #b0732c;
+}
+.B {
+  color: #a08633;
+}
+.C {
+  color: #8f9646;
+}
+.D {
+  color: #7da361;
+}
+.F {
+  color: #6eaf7f;
+}
+
 :root { 
   --main-width: auto;
 
@@ -149,6 +175,28 @@ button {
   padding: 4px 8px;
   border:none;
   transition: all 0.2s ease-in-out;
+}
+
+/*Select*/
+select {
+    background-color: var(--elevation2);
+    color: var(--text-color);
+    padding: calc(var(--padding) / 4);
+    border: 0;
+    border-radius: 8px;
+    border-color: var(--border);
+    box-shadow: 0 1px 3px rgb(0 0 0 / 40%);
+    margin: var(--margin);
+}
+select:focus {
+    outline:none;
+    background-color: var(--elevation2);
+    color: var(--text-color);
+    padding: calc(var(--padding) / 4);
+    border: 0;
+    border-radius: 8px;
+    border-color: var(--border);
+    box-shadow: 0 1px 3px rgb(0 0 0 / 40%);
 }
 
 

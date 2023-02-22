@@ -96,7 +96,7 @@ flex-wrap:wrap;
 justify-content:flex-start;
 gap:16px;
 width:100%;
-margin: var(--spacings) 0;
+margin: var(--margins)
 }
 
 .filterView {
@@ -125,6 +125,7 @@ margin: var(--spacings) 0;
 
 
 
+
 .tierTable {
   display: grid;
   grid-template-columns: 1fr;
@@ -135,7 +136,7 @@ margin: var(--spacings) 0;
 }
 
 .tierContainer {
-  min-height:168px;
+  min-height:145px;
 }
 .tierTag {
   font-weight:bold;
@@ -241,6 +242,9 @@ margin: var(--spacings) 0;
 
 
 @media only screen and (min-width: 860px) {
+  .filterContainer {
+    margin-left: calc(var(--margins) + 45px);
+  }
   .tierTag {
     writing-mode: vertical-rl;
     text-orientation: upright;
@@ -259,4 +263,38 @@ margin: var(--spacings) 0;
 .active {
   background-color:var(--elevation3) !important;
   border:1px solid var(--accent) !important;
+}
+
+
+/*Colors*/
+.SSS {
+  color: #c12d5c;
+}
+
+.SS {
+  color: #c34545;
+}
+
+.S {
+  color: #bc5d34;
+}
+
+.A {
+  color: #b0732c;
+}
+
+.B {
+  color: #a08633;
+}
+
+.C {
+  color: #8f9646;
+}
+
+.D {
+  color: #7da361;
+}
+
+.F {
+  color: #6eaf7f;
 }

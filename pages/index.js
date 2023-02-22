@@ -10,7 +10,7 @@ export default function Home() {
   const [sortedCharacters, setSortedCharacters] = useState(null)
   const [filteredCharacters, setFilteredCharacters] = useState(null)
   const [view, setView] = useState(0)                                                 //0 = default view, 1 = list view
-  const [filters, setFilters] = useState({weapon: "", class:"", burst:""})
+  const [filters, setFilters] = useState({weapon: "", class:"", burst:"", element:"", manufacturer:""})
   const [sorter, setSorter] = useState("overall");
   const [ascending, setAscending] = useState(1);
 
@@ -25,6 +25,8 @@ export default function Home() {
       setLoading(false)
     })
 }, [])
+
+    const options = {manufacturer: ["Missilis","Elysion","Tetra","Pilgrim","Abnormal"]}
 
     const tableFields = [
         {name: "Nikke", value:"name"}, 
@@ -60,6 +62,8 @@ export default function Home() {
             filters.weapon ? filtered = filtered.filter(character => character.weapon.toLowerCase() == filters.weapon) : "";
             filters.class ? filtered = filtered.filter(character => character.class.toLowerCase() == filters.class) : "";
             filters.burst ? filtered = filtered.filter(character => character.burst.toLowerCase() == filters.burst) : "";
+            filters.element ? filtered = filtered.filter(character => character.element.toLowerCase() == filters.element) : "";
+            filters.manufacturer ? filtered = filtered.filter(character => character.manufacturer == filters.manufacturer) : "";
             setFilteredCharacters(filtered)
           }
       }, [filters, sortedCharacters]);
@@ -76,9 +80,9 @@ export default function Home() {
     tierGrouping.F = filteredCharacters.filter(char => char["overall"] < 2)
     return (
       <>
-        <CharacterFilter view={view} filters={filters} changeView={changeView} changeFilters={changeFilters} />
+        <CharacterFilter view={view} filters={filters} changeView={changeView} changeFilters={changeFilters} options={options} />
         {view ?
-          <TableList list={filteredCharacters} fields={tableFields} changeSort={changeSort} /> :
+          <TableList list={filteredCharacters} fields={tableFields} changeSort={changeSort} imgfolder="characters" linkpath="characters" /> :
           <ImageTierList list={tierGrouping} />
         }
       </>

@@ -1,5 +1,5 @@
 "use client"
-import Styles from './characterList.module.css'
+import Styles from './characterlist.module.css'
 import Link from "next/link"
 
 export default function tableList ({ list, fields, changeSort }) {

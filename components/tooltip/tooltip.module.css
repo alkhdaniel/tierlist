@@ -1,0 +1,35 @@
+.tooltipContainer {
+  position:relative;
+  display: inline-block;
+}
+
+.tooltip {
+  pointer-events: none;
+  font-size:initial;
+  line-height:initial;
+  font-weight:initial;
+  position: absolute;
+
+  bottom: 125%;
+  left: 50%;
+  margin-left: -120px;
+
+  font-size:0.9rem;
+  width:240px;
+  background-color: var(--elevation2);
+  border-radius: 6px;
+  border: 1px solid var(--elevation3);
+  padding: 5px;
+}
+
+
+.theader {
+  font-size:1.2rem;
+  font-weight:bold;
+  text-align:center;
+}
+
+.timg {
+  display:block;
+  margin:0 auto
+}
